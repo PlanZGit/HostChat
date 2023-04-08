@@ -1,0 +1,139 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin LobbyForm() {
+  form {
+    @include flexCenter();
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      outline: none;
+      text-align: center;
+    }
+
+    .button-container {
+      position: absolute;
+      bottom: 45px;
+
+      @include flexCenter();
+      gap: 40px;
+      button {
+        border: none;
+        border-radius: 4px;
+        background-color: var(--main-bg-color);
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+
+        padding: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+.modal-container {
+  @include flexCenter();
+  flex-direction: column;
+  height: 70%;
+  gap: 10px;
+  opacity: 1;
+  transition: 1s;
+
+  @include LobbyForm();
+}
+.modal-container-hide {
+  @include flexCenter();
+  flex-direction: column;
+  height: 70%;
+  gap: 10px;
+  opacity: 0;
+  transition: 0.2s;
+
+  @include LobbyForm();
+}
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+
+  transition: opacity 0.5ms;
+}
+
+.ReactModal__Content {
+  color: orange;
+  outline: none;
+  position: absolute;
+
+  left: auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 20px;
+
+  background-color: white;
+  box-shadow: 0 16px 32px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+
+  transition: 0.5s;
+
+  svg {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    // transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    opacity: 1;
+    transition: 0.5s;
+  }
+}
+
+.overlayIsOpen {
+  background-color: aqua;
+}
+.overlayIsClose {
+  // pointer-events: none;
+  background-color: aqua;
+}
+
+.isOpen2 {
+  width: 300px;
+  height: 300px;
+
+  bottom: 10px;
+  right: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.isClose2 {
+  width: 100px;
+  height: 100px;
+
+  bottom: 10px;
+  right: 10px;
+  top: 90vh;
+  left: 90vw;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    opacity: 1;
+  }
+}
