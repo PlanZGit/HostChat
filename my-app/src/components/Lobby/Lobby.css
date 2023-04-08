@@ -32,9 +32,19 @@
   border-radius: 4px;
   background-color: var(--main-bg-color);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
   padding: 15px;
   padding-left: 40px;
   padding-right: 40px;
+  background: linear-gradient(to right, orange 50%, rgb(255, 255, 255) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: 0.15s;
+}
+.modal-container form .button-container button:hover {
+  color: white;
+  background-position: left;
+  transition: 0.15s;
 }
 
 .modal-container-hide {
@@ -46,6 +56,7 @@
   gap: 10px;
   opacity: 0;
   transition: 0.2s;
+  pointer-events: none;
 }
 .modal-container-hide form {
   display: flex;
@@ -71,9 +82,19 @@
   border-radius: 4px;
   background-color: var(--main-bg-color);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
   padding: 15px;
   padding-left: 40px;
   padding-right: 40px;
+  background: linear-gradient(to right, orange 50%, rgb(255, 255, 255) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: 0.15s;
+}
+.modal-container-hide form .button-container button:hover {
+  color: white;
+  background-position: left;
+  transition: 0.15s;
 }
 
 .ReactModal__Overlay {
@@ -83,7 +104,7 @@
   right: 0;
   bottom: 0;
   opacity: 1;
-  transition: opacity 0.5ms;
+  transition: 0.1s;
 }
 
 .ReactModal__Content {
@@ -91,7 +112,6 @@
   outline: none;
   position: absolute;
   left: auto;
-  border: 1px solid #ccc;
   background: #fff;
   padding: 20px;
   background-color: white;
@@ -101,21 +121,23 @@
 }
 .ReactModal__Content svg {
   position: absolute;
-  top: 2%;
-  left: 2%;
-  width: 50px;
-  height: 50px;
+  top: 8%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
   z-index: -1;
   opacity: 1;
   transition: 0.5s;
 }
 
 .overlayIsOpen {
-  background-color: aqua;
+  width: 100vw;
 }
 
 .overlayIsClose {
-  background-color: aqua;
+  width: 0px;
+  transition: 1s;
 }
 
 .isOpen2 {
@@ -129,23 +151,22 @@
 }
 
 .isClose2 {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   bottom: 10px;
   right: 10px;
-  top: 90vh;
-  left: 90vw;
+  top: calc(100vh - 100px);
+  left: calc(100vw - 100px);
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  pointer-events: none;
 }
 .isClose2 svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   z-index: 1;
   opacity: 1;
 }/*# sourceMappingURL=Lobby.css.map */

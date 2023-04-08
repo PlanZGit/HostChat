@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import "./Lobby.css";
 import { UserContext } from "../User/User";
 import ReactModal from "react-modal";
-import { CiSettings } from "react-icons/ci";
+import { TbSettings2 } from "react-icons/tb";
 
 ReactModal.setAppElement("#root");
 
@@ -53,7 +53,7 @@ const Lobby = () => {
             </div>
           </form>
         </div>
-        <CiSettings />
+        <TbSettings2 onClick={() => setModal(!modal)} />
       </ReactModal>
     </div>
   );
