@@ -15,9 +15,17 @@
   flex-direction: column;
   gap: 10px;
 }
+.modal-container form label {
+  color: black;
+  font-size: small;
+}
 .modal-container form input {
   outline: none;
   text-align: center;
+  padding: 4px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
 }
 .modal-container form .button-container {
   position: absolute;
@@ -31,11 +39,12 @@
   border: none;
   border-radius: 4px;
   background-color: var(--main-bg-color);
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
   font-weight: bold;
   padding: 15px;
   padding-left: 40px;
   padding-right: 40px;
+  color: orange;
   background: linear-gradient(to right, orange 50%, rgb(255, 255, 255) 50%);
   background-size: 200% 100%;
   background-position: right;
@@ -65,9 +74,17 @@
   flex-direction: column;
   gap: 10px;
 }
+.modal-container-hide form label {
+  color: black;
+  font-size: small;
+}
 .modal-container-hide form input {
   outline: none;
   text-align: center;
+  padding: 4px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
 }
 .modal-container-hide form .button-container {
   position: absolute;
@@ -81,11 +98,12 @@
   border: none;
   border-radius: 4px;
   background-color: var(--main-bg-color);
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
   font-weight: bold;
   padding: 15px;
   padding-left: 40px;
   padding-right: 40px;
+  color: orange;
   background: linear-gradient(to right, orange 50%, rgb(255, 255, 255) 50%);
   background-size: 200% 100%;
   background-position: right;
@@ -130,6 +148,14 @@
   opacity: 1;
   transition: 0.5s;
 }
+.ReactModal__Content svg + div {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  visibility: hidden;
+}
 
 .overlayIsOpen {
   width: 100vw;
@@ -137,7 +163,7 @@
 
 .overlayIsClose {
   width: 0px;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .isOpen2 {
@@ -153,6 +179,7 @@
 .isClose2 {
   width: 70px;
   height: 70px;
+  box-shadow: none;
   bottom: 10px;
   right: 10px;
   top: calc(100vh - 100px);
@@ -169,4 +196,7 @@
   height: 80px;
   z-index: 1;
   opacity: 1;
+}
+.isClose2 svg:hover + div {
+  visibility: visible;
 }/*# sourceMappingURL=Lobby.css.map */

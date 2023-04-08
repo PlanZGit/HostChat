@@ -10,9 +10,19 @@
     flex-direction: column;
     gap: 10px;
 
+    label {
+      color: black;
+      font-size: small;
+    }
+
     input {
       outline: none;
       text-align: center;
+      padding: 4px;
+
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+      border: none;
+      border-radius: 4px;
     }
 
     .button-container {
@@ -25,13 +35,14 @@
         border: none;
         border-radius: 4px;
         background-color: var(--main-bg-color);
-        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
         font-weight: bold;
 
         padding: 15px;
         padding-left: 40px;
         padding-right: 40px;
 
+        color: orange;
         background: linear-gradient(
           to right,
           orange 50%,
@@ -110,6 +121,15 @@
     z-index: -1;
     opacity: 1;
     transition: 0.5s;
+
+    + div {
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      visibility: hidden;
+    }
   }
 }
 
@@ -121,7 +141,7 @@
   // pointer-events: none; //important remove later
   // background-color: rgb(71, 71, 71);
   width: 0px;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .isOpen2 {
@@ -137,6 +157,8 @@
 .isClose2 {
   width: 70px;
   height: 70px;
+
+  box-shadow: none;
 
   bottom: 10px;
   right: 10px;
@@ -154,5 +176,9 @@
     height: 80px;
     z-index: 1;
     opacity: 1;
+
+    &:hover + div {
+      visibility: visible;
+    }
   }
 }

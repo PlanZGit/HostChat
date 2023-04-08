@@ -42,7 +42,7 @@ const Lobby = () => {
         <div className={modal ? "modal-container" : "modal-container-hide"}>
           <h1>Host Chat</h1>
           <form>
-            <label htmlFor="search">Search ID</label>
+            <label htmlFor="search">Search Room ID</label>
             <input id="search" placeholder="ID" ref={idRef} />
             <label htmlFor="username">Create username </label>
             <input id="username" placeholder="username" ref={nameRef} />
@@ -54,6 +54,7 @@ const Lobby = () => {
           </form>
         </div>
         <TbSettings2 onClick={() => setModal(!modal)} />
+        <div className="sub-settings">Show Sub Settings</div>
       </ReactModal>
     </div>
   );
